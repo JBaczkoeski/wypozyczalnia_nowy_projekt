@@ -18,13 +18,13 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container-fluid">
             <a class="navbar-brand h1">Twoje auto</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Strona główna</a>
+                        <a class="nav-link " aria-current="page" href="{{ url('/') }}">Strona główna</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Samochody</a>
@@ -74,7 +74,7 @@
             </div>
         </div>
     </nav>
-    <main class="py-4">
+    <main class="py-4 bg-dark">
         @yield('content')
     </main>
 </div>
