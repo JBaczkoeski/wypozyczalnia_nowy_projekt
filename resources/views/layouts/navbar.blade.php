@@ -18,7 +18,7 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3d3d3c">
         <div class="container-fluid">
             <a class="navbar-brand h1">Twoje auto</a>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -74,9 +74,12 @@
             </div>
         </div>
     </nav>
-    <main class="py-4 bg-dark">
+    <main class="py-4">
         @yield('content')
     </main>
+</div>
+<div>
+    @extends('layouts.footer')
 </div>
 </body>
 </html>
