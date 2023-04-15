@@ -21,6 +21,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3d3d3c">
         <div class="container-fluid">
             <a class="navbar-brand h1">Twoje auto</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -51,9 +54,9 @@
                             </li>
                         @endif
                     @else
-                        <li class="nav-item dropdown">
+                        <li >
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{ Auth::user()->name }}
                             </a>
 
