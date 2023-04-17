@@ -23,7 +23,7 @@
                             <div class="container col-6 col-lg-4">
                                 <label for="datePicker" class="form-label">Model auta</label>
                                 <select class="form-select" name="carModel" aria-label="Default select example">
-                                    <option selected>Wybierz model</option>
+                                    <option selected>Wybierz markę</option>
                                     <option value="1">One</option> //to będzie z bazy
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>

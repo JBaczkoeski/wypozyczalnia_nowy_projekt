@@ -14,8 +14,8 @@
 
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
-                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                    <h6 class="text-uppercase fw-bold mb-4">Kontakt</h6>
+                    <p><i class="fas fa-home me-3"></i> Szczecin...</p>
                     <p>
                         <i class="fas fa-envelope me-3"></i>
                         info@example.com
