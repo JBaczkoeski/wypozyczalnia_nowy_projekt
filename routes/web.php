@@ -14,15 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('User.welcome');
 });
 
 Auth::routes();
 
 Route::get('/cars', function (){
-  return view('cars');
+  return view('User.cars');
 });
 
 Route::get('/detailing', function (){
-    return view('detailing');
+    return view('User.detailing');
+});
+
+//Admin
+
+Route::get('/AdminWelcome', function (){
+    return view('Admin.home');
+});
+
+Route::get('/AdminCars', function (){
+    return view('Admin.cars');
+});
+
+Route::get('/CarAdd', function (){
+    return view('Admin.carAdd');
 });
