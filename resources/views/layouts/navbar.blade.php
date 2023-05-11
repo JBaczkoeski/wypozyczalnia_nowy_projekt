@@ -27,10 +27,10 @@
                         <a class="nav-link " aria-current="page" href="{{ url('/') }}">Strona główna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('cars') }}">Samochody</a>
+                        <a class="nav-link" href="{{ url('/api/User/cars') }}">Samochody</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Galeria</a>
+                        <a class="nav-link" href="{{ url('/gallery') }}">Galeria</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('detailing') }}">Detailing</a>

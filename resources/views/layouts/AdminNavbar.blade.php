@@ -27,7 +27,7 @@
                         <a class="nav-link " aria-current="page" href="{{ url('/AdminWelcome') }}">Strona główna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('AdminCars') }}">Samochody</a>
+                        <a class="nav-link" href="{{ url('/api/cars') }}">Samochody</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">

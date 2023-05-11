@@ -3,41 +3,47 @@
 @section('content')
     <div class="container-fluid">
         <div class="container col-12 text-center">
-            <a href="{{ url('CarAdd') }}" class="btn btn-success">Dodaj ofertę</a>
+            <a href="/CarAdd" class="btn btn-success">Dodaj ofertę</a>
         </div>
         <div class="row justify-content-center text-center">
-            @for($i = 1; $i <= 6; $i++)
-                <div class="card col-12 col-lg-3 col-sm-5 mx-2 my-2 d-flex p-2 border-0 shadow rounded-3">
-                    <img src="{{ asset('storage\cars\camaro.jpg') }}" class="card-img-top rounded-4" alt="...">
+            @foreach($cars as $car)
+                <div class="card col-12 col-lg-4 col-sm-5 mx-2 my-2 d-flex p-2 border-0 shadow rounded-3">
+                    <img src="{{ asset('storage/cars/'.$car->image) }}" class="card-img-top rounded-4" alt="...">
                     <div class="card-body">
                         <div class="row">
                             <div class="container col-12 mb-3 border-5 border-bottom border-dark">
-                                <h3 class="card-title">Camaro zl1</h3>
+                                <h3 class="card-title">{{$car['mark']}} {{$car['model']}}</h3>
                             </div>
                             <div class="container col-6 mb-4 h5">
-                                Rok produkcji: 2022
+                                Rok produkcji: {{$car['year_of_production']}}
                             </div>
                             <div class="container col-6 mb-4 h5">
-                                Moc: 580 km
+                                Moc: {{$car['power']}} km
                             </div>
                             <div class="container col-6 mb-4 h5">
-                                Skrzynia biegów: Manualna
+                                Skrzynia biegów: {{$car['transmission_type']}}
                             </div>
                             <div class="container col-6 mb-4 h5">
-                                Paliwo: Benzyna
+                                Paliwo: {{$car['fuel_type']}}
                             </div>
                             <div class="container col-6 mb-4 h5">
-                                Liczba drzwi: 3
+                                Liczba drzwi: {{$car['number_of_door']}}
                             </div>
                             <div class="container col-6 mb-4 h5">
-                                Liczba miejsc: 4
+                                Liczba miejsc: {{$car['number_of_seat']}}
                             </div>
-                            <a href="#" class="btn btn-success">Sprawdź</a>
-                            <a href="#" class="btn btn-danger mt-3">Usuń</a>
+
+                            <form action="{{ route('cars.destroy',$car['id']) }}" method="Post">
+                                <a href="{{ route('cars.show', $car['id']) }}" class="btn btn-success">Sprawdź</a>
+                                <a href="#" class="btn btn-warning mx-5">Edytuj</a>
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
                         </div>
                     </div>
                 </div>
-            @endfor
+            @endforeach
         </div>
     </div>
 @endsection

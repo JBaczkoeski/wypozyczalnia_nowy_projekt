@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,8 @@ Route::get('/cars', function (){
 Route::get('/detailing', function (){
     return view('User.detailing');
 });
+
+Route::get('/gallery', GalleryController::class);
 
 //Admin
 
